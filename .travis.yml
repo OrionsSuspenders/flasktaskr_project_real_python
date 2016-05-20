@@ -1,16 +1,27 @@
+# specify language
 language:
 - python
+
+#specify python version(s)
 python:
 - '3.4'
 - '2.7'
+
+# install dependencies
 install:
 - pip install -r requirements.txt
+
+# run tests
 script:
 - nosetests
+
+# deploy!
 deploy:
   provider: heroku
   api_key:
     secure: AsjAg8pRROfjmEQi1sbHzUfddralAPOZ50GHDtwwenIFFUGhzhAb9HYBZJKMinG9+zjp9fzCNn/tV/4o2mWGPY3OlV8l4XaSRP6nwnag4vSDNsnz+E7uFZsEnUItFaz6E2eTUo39o62fRPKoYvTEbrL86XXeE4Pc7UIgnqPBARHhB54kby5rkUzpgC+Hpav4kWgWaa6YxV5/UqcmqBjN0edqRoVTKHHes2KSHLpAQ6nNztmpDoqi6c+jqcrURtc6ext2Wvjc7Hg99IQ2PzUXhlIXJY/GKGtzPAXINm02Ns/IjlP3WKYyqZrqJwIHt6OgvETUkq0eQAYRPGHpCGsqq795mUMeYvjrtiTvOV6290ih9Qr495O25nJGBBHc4KKhaAYDDWrnKZGl61Zlczmb+chtQDrdHqPqfLuY1uDQuEUfvpCCX65rpwJrXn5cSfNLxaKubNUCK1uhNET/0Y25J4thTYJRY9V+1S05k8bJsE5bulFJ8ZPDfPV65kVytJIdC8H3/upB2gywYnBoGqLfdsbhpmj62xMBwhjqQk7hFiCO7UJeMPbdF4iwKRpIhjdeSIi8sdzZVUedb9rtw+Zqm8Fq92937MeoupuEQOKNhHpwQRHvC1oK+wcrkdQVxe9osGE954AD3276khgWKrBWhFEvwsN5aGJWyLUqKG9dv2Y=
   app: flasktaskr-project-real-python
   on:
+    branch: master
+    python: '3.4'
     repo: OrionsSuspenders/flasktaskr_project_real_python
